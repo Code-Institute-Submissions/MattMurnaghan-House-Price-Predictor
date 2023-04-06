@@ -1,7 +1,44 @@
 # **House-Price-Predictor**
 The aim of this repo is to demonstrate Machine Learning and Deep Learning concepts with respect to predicting the price of houses for sale given a dataset supplied by kaggle.com
 
-## **Project Set Up**
+## **Table of Contents**
+
+1. [Introduction](#introduction)
+    * [Background information](#background-information)
+    * [Purpose of the project](#purpose-of-the-project)
+    * [User Stories](#user-stories)
+    * [Data source](#data-source)
+2. [Project Set Up](#project-set-up)
+    * [About pyenv](#about-pyenv)
+    * [Setting up the Virtual Environment (venv)](#setting-up-the-virtual-environment-venv)
+    * [Installing packages and dependencies](#installing-packages-and-dependencies)
+3. [Usage](#usage)
+    * [Running the application](#running-the-application)
+    * [Inputting features for prediction](#inputting-features-for-prediction)
+4. [Data preprocessing](#data-preprocessing)
+    * [Cleaning the data](#cleaning-the-data)
+    * [Feature engineering](#feature-engineering)
+5. [Exploratory data analysis](#exploratory-data-analysis)
+    * [Visualizations of features and correlations](#visualizations-of-features-and-correlations)
+6. [Model development](#model-development)
+    * [Model selection](#model-selection)
+    * [Hyperparameter tuning](#hyperparameter-tuning)
+    * [Model evaluation](#model-evaluation)
+7. [Results](#results)
+    * [Predicted sale prices for the four inherited properties](#predicted-sale-prices-for-the-four-inherited-properties)
+    * [Prediction for other houses in Ames, Iowa](#prediction-for-other-houses-in-ames-iowa)
+8. [Conclusion](#conclusion)
+    * [Summary of findings](#summary-of-findings)
+    * [Future work](#future-work)
+9. [References](#references)
+    * [Data source](#data-source)
+    * [Libraries and resources used](#libraries-and-resources-used)
+10. [Acknowledgements](#acknowledgements)
+    * [Credits to contributors or other sources of support](#credits-to-contributors-or-other-sources-of-support)
+
+
+## **Project Set Up**<a name="project-set-up"></a>
+
 I approached this project a bit differently than the other projects I've undertaken as part of the Full Stack Developer course with the Code Institute. 
 
 Due to a recent issue with the GitPod platform that I used to develop my previous projects, I took it upon myself to configure my projects locally. I'm working on a Macbook Pro with an M1 Pro chip, so I have more than enough processing power to run the Machine Learning and Deep Learning processing.
@@ -10,7 +47,7 @@ To configure the project locally, I checked the supported Python versions by Her
 
 In order to maintain the project environment, I used the pyenv version management project to create a virtual environment on my local machine to run the project in. This ensures that the project will remain stable when it is reproduced by other developers in the future.
 
-## **About Pyenv**
+## **About Pyenv**<a name="about-pyenv"></a>
 
 Pyenv is a tool for managing multiple versions of Python on a single machine. It allows you to easily switch between different versions of Python, and provides a way to manage Python dependencies for different projects.
 
@@ -28,11 +65,11 @@ Using Pyenv has several benefits:
 
 To install Pyenv, follow the instructions in the [official documentation](https://github.com/pyenv/pyenv#installation). Once installed, you can start using Pyenv to manage your Python environment.
 
-## **Getting Started**
+### **Getting Started**
 
 To get started with Pyenv, check out the [official documentation](https://github.com/pyenv/pyenv#usage). This will guide you through the process of creating virtual environments, switching between Python versions, and managing dependencies for different projects.
 
-## **Setting up the Virtual Environment (venv)**
+## **Setting up the Virtual Environment (venv)**<a name="setting-up-the-virtual-environment-venv"></a>
 You can check for available Python versions that you can install with pyenv by using the following command:
 ```
 pyenv install --list
@@ -115,7 +152,7 @@ This should bring you back into the global terminal.
 
 Now the the virtual environment in set up, we can start intalling the dependencies needed for this project.
 
-## **Installing packages and dependencies**
+## **Installing packages and dependencies**<a name="installing-packages-and-dependencies"></a>
 to install the packages and required dependencie for this project, run the following command from the root directory:
 
 ```

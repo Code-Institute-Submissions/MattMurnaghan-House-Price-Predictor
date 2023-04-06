@@ -94,6 +94,18 @@ The images below show how the terminal looks before and after you have successfu
 ![Terminal - venv environment](images/venv_terminal.jpg)
 *Terminal after venv has been activated*
 
+<br>
+
+You can check to make sure that the correct version of python is being detected in the environment by running the following command:
+```
+python -V
+```
+
+It should output the following message to the terminal if you have done everything right:
+```
+Python 3.10.10
+```
+
 To deactivate the environment, simply type the following command from anywhere int the terminal:
 ```
 deactivate
@@ -102,3 +114,32 @@ deactivate
 This should bring you back into the global terminal.
 
 Now the the virtual environment in set up, we can start intalling the dependencies needed for this project.
+
+## **Installing packages and dependencies**
+to install the packages and required dependencie for this project, run the following command from the root directory:
+
+```
+pip install requiremets.txt
+```
+
+Because I am running on Mac OS using the ARM64 architecure from the M1 Pro processor, there are some slight changes I had to make when installing the packages.
+
+I ran the following command to ensure that only the binaries using x86 architecture were installed, as not all of the python packages used in this project have been released with compatible versions for my architecture.
+
+```
+env ARCHFLAGS="-arch x86_64" pip install -r requirements.txt
+```
+
+This ensured that the project was stable and ran locally on my machine. I also replaced tensorlfow with tensorflow-macos in the requirements.txt file as per apples direction in this article: [Using TensorFlow on MacOS](https://developer.apple.com/forums/thread/686926)
+
+Once the required packages have been installed, you can see the full list by running the following command:
+```
+pip list
+```
+
+After installing the package on my system, I executed the following command to ensure that the project's package versions are compatible with its stable version. This ensures that anyone replicating the project will also use compatible package versions.
+```
+pip freeze > requirements.txt
+```
+
+Now that the environment is configured, we can begin to explore the data set and  the relating business case for this project.

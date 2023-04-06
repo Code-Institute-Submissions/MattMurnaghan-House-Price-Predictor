@@ -4,10 +4,11 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
 ## **Table of Contents**
 
 1. [Introduction](#introduction)
-    * [Background information](#background-information)
-    * [Purpose of the project](#purpose-of-the-project)
-    * [User Stories](#user-stories)
-    * [Data source](#data-source)
+    * [Business Case](#business-case)
+    * [Data set](#data-set)
+    * [Business Requirements](#business-case)
+    * [User Stories - Data Practitioner](#user-stories-data-practitioner)
+    * [User Stories - Client](#user-stories-client)
 2. [Project Set Up](#project-set-up)
     * [About pyenv](#about-pyenv)
     * [Setting up the Virtual Environment (venv)](#setting-up-the-virtual-environment-venv)
@@ -36,8 +37,59 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
 10. [Acknowledgements](#acknowledgements)
     * [Credits to contributors or other sources of support](#credits-to-contributors-or-other-sources-of-support)
 
+## **Introduction**<a name="introduction"></a>
+This is the final project that I am undertaking as part of the Code Institute Full Stack Developer program. This project deals with the topics of Machine Learning, Deep Learning, Python development, business case analysis, API integration and dashboard development using Streamlit.
 
-## **Project Set Up**<a name="project-set-up"></a>
+### **Business Case - Predicting House Prices in Ames, Iowa** <a name="business-case"></a>
+This project aims to assist a fictional client, Lydia Doe, in maximizing the sales price for four houses that she inherited in Ames, Iowa. Lydia is concerned about inaccurate pricing estimation due to her limited knowledge of the Iowan housing market. Therefore, she seeks the assistance of a data practitioner to predict the sales price of the inherited properties and any other house in Ames, Iowa.
+
+To achieve this goal, we will build a Data Web App that predicts the sales price from the four inherited houses based on their attributes. Additionally, we will develop a dashboard that allows Lydia to explore how the house attributes correlate with the sale price using data visualizations.
+
+### **Dataset** <a name="data-set"></a>
+We will use a public dataset of house prices for Ames, Iowa, sourced from Kaggle. The dataset consists of 1,460 observations and 81 explanatory variables that describe (almost) every aspect of residential homes in Ames, Iowa. 
+
+The dataset contains information on the house's features, such as the number of bedrooms, bathrooms, and square footage, as well as information on the lot, such as the size and shape of the lot, and other important details like the age of the house, condition, and location. 
+
+This dataset will enable us to build a model that predicts the sale price of a house in Ames, Iowa, based on its attributes. The dataset is provided by [Kaggle.com](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
+
+
+
+### **Business Requirements** <a name="business-requirements"></a>
+The business requirements are outlined below:
+* Predict the sale price of Lydia's four inherited properties, as well as any other house in Ames, Iowa.
+* Develop a dashboard that allows Lydia to explore how the house attributes correlate with the sale price using data visualizations.
+* Provide an explanation of the key factors that influence the sale price of a house in Ames, Iowa.
+* With the successful completion of this project, Lydia will be able to accurately price her properties and make informed decisions regarding any future real estate investments in Ames, Iowa.
+
+
+### **User Stories - Data Practitioner** <a name="user-stories-data-practitioner"></a>
+From the projecct requirements, we can create a list of user stories for both the data practioner and the standard non-technical user.
+
+1. As a data practitioner, I want to import the public dataset provided by Lydia into our system so that I can build a model to predict the sales price of the four houses located in Ames, Iowa, USA.
+
+2. As a data practitioner, I want to clean and preprocess the dataset so that I can build an accurate model for predicting house prices.
+
+3. As a data practitioner, I want to explore the dataset to understand the features and their relationships with the sale price so that I can create informative visualizations for the client.
+
+4. As a data practitioner, I want to build a predictive model that accurately predicts the sale price of the four inherited properties as well as any other house in Ames, Iowa.
+
+5. As a data practitioner, I want to optimize the model's hyperparameters to ensure that it is as accurate as possible.
+
+6. As a data practitioner, I want to test the model's accuracy and ensure that it is reliable for predicting house prices.
+
+### **User Stories - Client** <a name="user-stories-client"></a>
+
+1. As a client, I want to see visualizations of the correlated variables against the sale price so that I can better understand the relationship between the features and the price.
+
+2. As a client, I want to be able to input the features of a house and get an accurate prediction of the sale price so that I can make informed decisions about buying or selling properties in Ames, Iowa.
+
+3. As a client, I want to be able to see the predicted sale price of each of the four inherited properties so that I can make informed decisions about selling them.
+
+4. As a client, I want the data web app to be user-friendly and easy to use so that I can quickly and easily access the information I need to make informed decisions.
+
+I tracked the user stories for this project on GitHub using individual tickets in adherance with Agile project management fundamentals.
+
+## **Project Set Up** <a name="project-set-up"></a>
 
 I approached this project a bit differently than the other projects I've undertaken as part of the Full Stack Developer course with the Code Institute. 
 

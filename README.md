@@ -175,13 +175,15 @@ After creating your environment, you should activate it by running this command 
 
 The images below show how the terminal looks before and after you have successfully activated your virtual environment.
 
-![Terminal - global environment](images/global_terminal.jpg)
-*Terminal before venv has been activated*
+| ![Terminal - global environment](images/global_terminal.jpg) |
+| :--: |
+| *Terminal before venv has been activated* |
 
 <br>
 
-![Terminal - venv environment](images/venv_terminal.jpg)
-*Terminal after venv has been activated*
+| ![Terminal - venv environment](images/venv_terminal.jpg) |
+| :--: |
+| *Terminal after venv has been activated* |
 
 <br>
 
@@ -232,3 +234,18 @@ pip freeze > requirements.txt
 ```
 
 Now that the environment is configured, we can begin to explore the data set and  the relating business case for this project.
+
+## **Acknowledgements**<a name-="acknowledgements"></a>
+
+This section lists all of the different sources and individuals that added to the overall project.
+
+### **Credits to contributors or other sources of support**<a name="credits-to-contributors-or-other-sources-of-support"></a>
+
+1. [Stack overflow - Convert df.info() to standalone dataframe](https://stackoverflow.com/questions/64067424/how-to-convert-df-info-into-data-frame-df-info)
+
+2. 
+
+### **Tools and Libaries**<a name="tools-and-libraries"></a>
+
+1. [pyenv](https://github.com/pyenv/pyenv)
+    * Used to create the virtual environment in which the project was run to ensure stability and isolation of installed packages.   

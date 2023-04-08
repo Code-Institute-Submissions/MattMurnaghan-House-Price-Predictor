@@ -248,4 +248,6 @@ This section lists all of the different sources and individuals that added to th
 ### **Tools and Libaries**<a name="tools-and-libraries"></a>
 
 1. [pyenv](https://github.com/pyenv/pyenv)
-    * Used to create the virtual environment in which the project was run to ensure stability and isolation of installed packages.   
+    * Used to manage the multiple versions of python installed on my local machine and set the required python version for the virtual environment.
+2. [venv](https://docs.python.org/3/library/venv.html)
+    * Used to create the virtual environment in which the project was run to ensure stability and isolation of installed packages.

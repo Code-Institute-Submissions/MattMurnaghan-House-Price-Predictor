@@ -27,7 +27,7 @@ def regression_evaluation(X,y,pipeline):
     st.write("\n")
 
 
-def regression_evaluation_plots(X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0.5):
+def regression_plots(X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0.5):
     prediction_train = pipeline.predict(X_train)
     prediction_test = pipeline.predict(X_test)
 

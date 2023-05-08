@@ -105,6 +105,7 @@ def DisplayCorrAndPPS(df_corr_pearson, df_corr_spearman, pps_matrix, CorrThresho
     else:
         heatmap_pps_st(df=pps_matrix, threshold=PPS_Threshold, figsize=figsize, font_annot=font_annot)
 
+# Add functionality to plot correlation and PPS in streamlit
 def plot_corr_pearson_pps_st(df):
     df_corr_pearson, df_corr_spearman, pps_matrix = CalculateCorrAndPPS(df)
     DisplayCorrAndPPS(df_corr_pearson = df_corr_pearson,

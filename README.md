@@ -7,6 +7,7 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
     * [Business Case](#business-case)
     * [Data set](#data-set)
     * [Business Requirements](#business-case)
+    * [Hypothesis and Test](#hypothesis-and-test)
     * [User Stories - Data Practitioner](#user-stories-data-practitioner)
     * [User Stories - Client](#user-stories-client)
 2. [Project Set Up](#project-set-up)
@@ -56,10 +57,21 @@ This dataset will enable us to build a model that predicts the sale price of a h
 
 ### **Business Requirements**<a name="business-requirements"></a>
 The business requirements are outlined below:
-* Predict the sale price of Lydia's four inherited properties, as well as any other house in Ames, Iowa.
+* Perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
+* Deliver an ML system that can predict the summed sale price of Lydia's four inherited properties, as well as any other house in Ames, Iowa.
+* Deliver either a conventional ML or Neural network bases system.
 * Develop a dashboard that allows Lydia to explore how the house attributes correlate with the sale price using data visualizations.
-* Provide an explanation of the key factors that influence the sale price of a house in Ames, Iowa.
-* With the successful completion of this project, Lydia will be able to accurately price her properties and make informed decisions regarding any future real estate investments in Ames, Iowa.
+* Consider changing from regression to classification if suitable.
+* Perform an extensive hyperparameter search for a given algorithm.
+
+### **Hypothesis and Test**<a name="business-requirements"></a>
+The following are the hypotheses that I have made for this project:
+1.  I suspect that a house with high OverallQual sells for a higher price.
+    
+    A correlation analysis between OverallQual and SalePrice can show this relationship.
+2.  I suspect that a house with a big garage sells for a higher price.
+    
+    A correlation analysis between GarageArea and SalePrice can show this relationship.
 
 
 ### **User Stories - Data Practitioner**<a name="user-stories-data-practitioner"></a>

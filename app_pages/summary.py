@@ -1,14 +1,13 @@
 '''
 This file and the contents have been taken from the
- Churnometer walk through Project 2 and customized for
- this project
+Churnometer walk through Project 2 and customized for
+this project
 '''
 import streamlit as st
 
 
 def summary_body():    
     st.info(
-
         "## Introduction\n\n"
         "This is the final project that I am undertaking as part of the\n"
         "Code Institute Full Stack Developer program. This project deals\n"
@@ -35,9 +34,6 @@ def summary_body():
         "is provided by\
             [Kaggle.com](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data)."
     )
-
-    # "Business Requirements" section
-    """Business Requirements"""
     st.success(
         "## Business Requirements\n\n"
         "The business requirements are outlined below:\n"
@@ -49,16 +45,12 @@ def summary_body():
         "* Perform an extensive hyperparameter search for a given algorithm.\n\n"
         )
 
-    # Link to README file, so the users can have access to
-    # full project documentation
-    """Readme file"""
     st.write(
         "* For additional information, please visit and **read** the "
         "[Project README file.]"
         "(https://github.com/MattMurnaghan/House-Price-Predictor#hypothesis-and-test)"
         )
 
-    """Dataset guidelines"""
     st.info(
         "**Dataset Description Table**\n\n"
         " --- \n"

@@ -98,8 +98,8 @@ def DisplayCorrAndPPS(df_corr_pearson, df_corr_spearman, pps_matrix, CorrThresho
 
     print("\n")
     print("*** Heatmap: Power Predictive Score (PPS) ***")
-    print(f"PPS detects linear or non-linear relationships between two columns.\n"
-          f"The score ranges from 0 (no predictive power) to 1 (perfect predictive power) \n")
+    print("PPS detects linear or non-linear relationships between two columns.\n"
+          "The score ranges from 0 (no predictive power) to 1 (perfect predictive power) \n")
     if not streamlit:
         heatmap_pps(df=pps_matrix, threshold=PPS_Threshold, figsize=figsize, font_annot=font_annot)
     else:

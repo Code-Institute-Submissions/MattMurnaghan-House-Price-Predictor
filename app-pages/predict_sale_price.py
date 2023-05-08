@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from src.file_management import load_clean_data, load_pkl_file
-from src.eval_pipeline_perf import regression_performance
-from src.eval_pipeline_perf import regression_evaluation_plots
+from src.manage_files import load_clean_data, load_pkl_file
+from src.pipeline_performance import regression_performance
+from src.pipeline_performance import regression_evaluation_plots
 
 
 def page_predict_sale_price_body():

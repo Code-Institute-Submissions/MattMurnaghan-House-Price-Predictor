@@ -59,9 +59,9 @@ This dataset will enable us to build a model that predicts the sale price of a h
 The business requirements are outlined below:
 * Perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.
 * Deliver an ML system that can predict the summed sale price of Lydia's four inherited properties, as well as any other house in Ames, Iowa.
-* Deliver either a conventional ML or Neural network bases system.
-* Develop a dashboard that allows Lydia to explore how the house attributes correlate with the sale price using data visualizations.
-* Consider changing from regression to classification if suitable.
+* Deliver either a conventional ML or Neural network based system.
+* Develop a dashboard that allows Lydia to explore how the house attributes correlated with the sale price using data visualizations.
+* Consider changing from regression to classification if suitable/required.
 * Perform an extensive hyperparameter search for a given algorithm.
 
 ### **Hypothesis and Test**<a name="business-requirements"></a>

@@ -47,11 +47,41 @@ This project aims to assist a fictional client, Lydia Doe, in maximizing the sal
 To achieve this goal, we will build a Data Web App that predicts the sales price from the four inherited houses based on their attributes. Additionally, we will develop a dashboard that allows Lydia to explore how the house attributes correlate with the sale price using data visualizations.
 
 ### **Dataset**<a name="data-set"></a>
-We will use a public dataset of house prices for Ames, Iowa, sourced from Kaggle. The dataset consists of 1,460 observations and 81 explanatory variables that describe (almost) every aspect of residential homes in Ames, Iowa. 
+We will use a public dataset of house prices for Ames, Iowa, sourced from Kaggle. The dataset consists of 1,460 observations and 24 variables that describe (almost) every aspect of residential homes in Ames, Iowa. 
 
 The dataset contains information on the house's features, such as the number of bedrooms, bathrooms, and square footage, as well as information on the lot, such as the size and shape of the lot, and other important details like the age of the house, condition, and location. 
 
 This dataset will enable us to build a model that predicts the sale price of a house in Ames, Iowa, based on its attributes. The dataset is provided by [Kaggle.com](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
+
+**Dataset Description Table**
+---
+|Variable|Meaning|Units|
+|:----|:----|:----|
+|1stFlrSF|First Floor square feet|(Min - Max > Sq. ft.) 334 - 4692|
+|2ndFlrSF|Second floor square feet|(Min - Max > Sq. ft.) 0 - 2065|
+|BedroomAbvGr|Bedrooms above grade (does NOT include basement bedrooms)|(Min - Max > Bedrooms) 0 - 8|
+|BsmtExposure|Refers to walkout or garden level walls|Gd:Good Exposure; Av: Average Exposure; Mn: Mimimum Exposure;No: No Exposure; None: No Basement|
+|BsmtFinType1|Rating of basement finished area|GLQ: Good Living Quarters; ALQ: Average Living Quarters; BLQ: Below Average Living Quarters; Rec: Average Rec Room; LwQ: Low Quality; Unf: Unfinshed; None: No Basement|
+|BsmtFinSF1|Type 1 finished square feet|(Min - Max > Sq. ft.) 0 - 5644|
+|BsmtUnfSF|Unfinished square feet of basement area|(Min - Max > Sq. ft.) 0 - 2336|
+|TotalBsmtSF|Total square feet of basement area|(Min - Max > Sq. ft.) 0 - 6110|
+|GarageArea|Size of garage in square feet|(Min - Max > Sq. ft.) 0 - 1418|
+|GarageFinish|Interior finish of the garage|Fin: Finished; RFn: Rough Finished; Unf: Unfinished; None: No Garage|
+|GarageYrBlt|Year garage was built|(Min - Max > Year) 1900 - 2010|
+|GrLivArea|Above grade (ground) living area square feet| (Min - Max > Sq. ft.) 334 - 5642|
+|KitchenQual|Kitchen quality|Ex: Excellent; Gd: Good; TA: Typical/Average; Fa: Fair; Po: Poor|
+|LotArea| Lot size in square feet|(Min - Max > Sq. ft.) 1300 - 215245|
+|LotFrontage| Linear feet of street connected to property|(Min - Max > Lin. ft.) 21 - 313|
+|MasVnrArea|Masonry veneer area in square feet|(Min - Max > Sq. ft.) 0 - 1600|
+|EnclosedPorch|Enclosed porch area in square feet|(Min - Max > Sq. ft.) 0 - 286|
+|OpenPorchSF|Open porch area in square feet|(Min - Max > Sq. ft.) 0 - 547|
+|OverallCond|Rates the overall condition of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
+|OverallQual|Rates the overall material and finish of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
+|WoodDeckSF|Wood deck area in square feet|(Min - Max > Sq. ft.) 0 - 736|
+|YearBuilt|Original construction date|(Min - Max > Year) 1872 - 2010|
+|YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|(Min - Max > Year) 1950 - 2010|
+|SalePrice|Sale Price|(Min - Max > Price in $) 34900 - 755000|
+---
 
 
 

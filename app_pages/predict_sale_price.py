@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from src.manage_files import load_clean_data, load_pkl_file
 from src.pipeline_performance import regression_performance
 from src.pipeline_performance import regression_plots
-
+from graphviz import Digraph
 
 def predict_sale_price_body():
 
@@ -21,7 +21,7 @@ def predict_sale_price_body():
 
     st.write("### ML Pipeline: Predict House Sale Price")
     # display pipeline training summary conclusions
-    st.warning(
+    st.write(
         f"The Regressor Model employed in this prediction is the RandomForrest Regressor.\n"
         f"* Both feature selection and PCA produced similar results and meet "
         f"business requirement 1.\n"
@@ -33,26 +33,32 @@ def predict_sale_price_body():
 
     # show pipeline steps
     st.write("### ML pipeline to predict sale price")
-    st.info(sale_price_pipeline)
-    st.write("---")
+    pipeline_steps = sale_price_pipeline.steps
 
+    # Create a Graphviz graph
+    dot = Digraph()
+    dot.node('A', f'{pipeline_steps[0][0]}\n{pipeline_steps[1][0]}\n{pipeline_steps[2][0]}')
+    dot.node('B', pipeline_steps[3][0])
+    dot.node('C', pipeline_steps[4][0])
+    dot.edges(['AB', 'BC'])
+
+    st.write("The ML pipeline to predict the sale price of a house is shown below:")
+    # Display the graph in Streamlit
+    st.graphviz_chart(dot.source)
+    st.write("The final pipeline only required 3 transformers before scaling and\
+                modeling as we are only assessing 4 features, shown below:")
     # show best features
     st.write("### The features used to train the model and their importance:")
-    cnt = 0
-    for feat_str in feature_importance['Feature'].sort_values():
-        if cnt == 0:
-            new_str = feat_str
-            cnt = 1
-        else:
-            new_str = new_str + ', ' + feat_str
+    feature_importance = feature_importance['Feature'].sort_values().to_list()
+    for feat in feature_importance:
+        st.write(f"* {feat}")
 
-    st.write(new_str)
     st.image(feature_importance_plot)
     st.write("---")
 
     # evaluate pipeline performance
     st.write("### Evaluating the Pipeline Performance.")
     regression_performance(X_train, y_train, X_test, y_test, sale_price_pipeline)
-    regression_plots = plt.imread(f"{path}/regression_evaluation_plots.png")
-    st.image(sale_price_pipeline)
+    st.write("---")
+    regression_plots(X_train, y_train, X_test, y_test, sale_price_pipeline)
     st.write("---")

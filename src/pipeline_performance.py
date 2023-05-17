@@ -32,16 +32,19 @@ def regression_plots(X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0
     prediction_test = pipeline.predict(X_test)
 
     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12,6))
-    sns.scatterplot(x=y_train, y=prediction_train, alpha=alpha_scatter, ax=axes[0])
-    sns.lineplot(x=y_train, y=y_train, color='red', ax=axes[0])
+    sns.scatterplot(x=y_train['SalePrice'], y=prediction_train, alpha=alpha_scatter, ax=axes[0])
+    sns.lineplot(x=y_train['SalePrice'], y=y_train['SalePrice'], color='red', ax=axes[0])
     axes[0].set_xlabel("Actual")
     axes[0].set_ylabel("Predictions")
     axes[0].set_title("Train Set")
+    axes[0].legend(['Predictions', 'Actual'], loc='lower right')
 
-    sns.scatterplot(x=y_test , y=prediction_test, alpha=alpha_scatter, ax=axes[1])
-    sns.lineplot(x=y_test , y=y_test, color='red', ax=axes[1])
+
+    sns.scatterplot(x=y_test['SalePrice'] , y=prediction_test, alpha=alpha_scatter, ax=axes[1])
+    sns.lineplot(x=y_test['SalePrice'] , y=y_test['SalePrice'], color='red', ax=axes[1])
     axes[1].set_xlabel("Actual")
     axes[1].set_ylabel("Predictions")
     axes[1].set_title("Test Set")
+    axes[1].legend(['Predictions', 'Actual'], loc='lower right')
 
     st.pyplot(fig)

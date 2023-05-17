@@ -13,7 +13,7 @@ def price_predictor_body():
 
     # load predict sale price files
     version = 'v1'
-    path = f"outputs/ml_pipeline/predict_saleprice/{version}"
+    path = f"outputs/pipelines/predict_saleprice/{version}"
 
     price_pipeline = load_pkl_file(f"{path}/best_regressor_pipeline.pkl")
     price_features = (pd.read_csv(f"{path}/X_train.csv")
@@ -24,7 +24,7 @@ def price_predictor_body():
                                 (f"{path}/feature_importance.csv")['Feature'])
 
     st.write("### Sale Price Prediction for the refurbished houses:")
-    st.success(
+    st.info(
         f"* The Client is interested in predicting the house sales price"
         f" for 6 newly refurbished houses, and any other house "
         f"in Ames, Iowa."
@@ -32,13 +32,13 @@ def price_predictor_body():
     st.write("---")
 
     st.write("### Refurbished houses price prediction")
-    st.info(
+    st.write(
         f"* Below are the details of the refurbished "
         f"houses and their respective sale price predictions."
         )
     total_price = predict_refurbished_house_price(price_pipeline, price_features)
     total_price = "%.2f" % total_price
-    st.success(
+    st.info(
         f"The sum total sale price for all 6 refurbished "
         f"properties is \u0024{total_price}."
         )
@@ -50,7 +50,7 @@ def price_predictor_body():
         check_variables_for_UI(price_features)
 
     st.write("### Houses Price Predictor")
-    st.warning(
+    st.info(
         f"* Enter your values for the property for "
         f"which you require a **price prediction**.\n\n"
         f"Legend: \n\n"
@@ -113,11 +113,11 @@ def DrawInputsWidgets():
 
     # load dataset
     df = load_clean_data("clean")
-    percentageMin, percentageMax = 0.4, 2.0
+    percentageMin, percentageMax = 0.2, 2.0
 
     # we create input widgets for all features
-    col1, col2 = st.beta_columns(2)
-    col3, col4 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
+    col3, col4 = st.columns(2)
 
     # We are using these features to feed the ML pipeline
     # - values copied from check_variables_for_UI() result
@@ -134,6 +134,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
+            step=1.0,
             value=df[feature].median()
             )
         X_live[feature] = st_widget
@@ -144,6 +145,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
+            step=10.0,
             value=df[feature].median()
             )
         X_live[feature] = st_widget
@@ -154,6 +156,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
+            step=10.0,
             value=df[feature].median()
             )
         X_live[feature] = st_widget
@@ -164,6 +167,7 @@ def DrawInputsWidgets():
             label=feature,
             min_value=df[feature].min()*percentageMin,
             max_value=df[feature].max()*percentageMax,
+            step=5.0,
             value=df[feature].median()
             )
         X_live[feature] = st_widget

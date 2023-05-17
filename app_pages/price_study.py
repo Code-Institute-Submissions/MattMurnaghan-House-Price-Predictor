@@ -95,5 +95,5 @@ def plot_numerical(df, col, target_var):
     fig, axes = plt.subplots(figsize=(15, 8))
     sns.regplot(data=df, x=col, y=target_var)
     plt.title(f"{col}", fontsize=20)
-    st.pyplot(fig)  # st.pyplot() renders image, in notebook is plt.show()
+    st.pyplot(fig)  
 

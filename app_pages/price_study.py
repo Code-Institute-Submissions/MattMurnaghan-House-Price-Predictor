@@ -41,7 +41,7 @@ def price_study_body():
     st.write("---")
 
     # Correlation Study Summary
-    st.success(
+    st.write(
         "* Correlation studies were conducted, using the Pearson and Spearman methods "
         "to better understand the correlative relationship between the dataset variables the sale price.\n"
         "* By selecting the top 6 correlated features from both the Spearman and Pearson methods, we can \n"
@@ -49,14 +49,10 @@ def price_study_body():
         "**1stFlrSF, GarageArea, GrLivArea, GarageYrBlt, OverallQual, "
         "TotalBsmtSF, YearBuilt**"
     )
-
-    if st.checkbox("Inspect Spearman and Pearson Correlation"):
-        plot_corr_pearson_pps_st(df)
-
-    # Text based on "sale price study" notebook
-    # "Conclusions and Next steps" section
+        
+    # Correlation Study
     st.info(
-        "### The correlations and plots interpretation converge.\n"
+        "### Correlation plots and interpretation.\n"
         "The following are the variables isolated in the"
         " correlation study:\n"
         "* 1stFlrSF: First Floor square feet.\n"
@@ -67,9 +63,12 @@ def price_study_body():
         "* TotalBsmtSF: Total square feet of basement area.\n"
         "* YearBuilt: Original construction date (1872 to 2010).\n\n"
         "The plots show that the variables isolated in the "
-        "correlation study, do indeed have a strong correlation and "
-        "possibly strong predictive power for Sale Price for these houses.\n"
+        "correlation study, do indeed have a strong positive correlation and "
+        "linear relationship with Sale Price for these houses.\n"
     )
+
+    if st.checkbox("Inspect Spearman and Pearson Correlation"):
+        plot_corr_pearson_pps_st(df)
 
     # Code copied from "sale price study" notebook
     # "EDA on the Correlated Variable List" section

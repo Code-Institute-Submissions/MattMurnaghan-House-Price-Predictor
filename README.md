@@ -340,6 +340,7 @@ At the end, we selected a combination of the yeojohnson, power and log transform
 
 We then performed a smart correlation selection on the entire dataset. This allowed us to analyse which of the features in the dataset were overcorrelated with each other, essentially, doubling the data without adding much extra value. We added this step into creating the first pipeline, allowing us to trim down the required features for us to feed into the ML pipeline during the modeling phase. 
 
+An ordinal encoder was also employed to change the categorical variables contained within the set to numerical values as the scikit learn and feature engine libararies require numerical values to analyse the dataset.
 ## **Model development**<a name="model-development"></a>
 This section is explained in more detail in notebook 5, Modeling and Evaluation. 
 
@@ -449,9 +450,15 @@ This section lists all of the different sources and individuals that added to th
 
 2. 
 
-### **Tools and Libaries**<a name="tools-and-libraries"></a>
+### **Tools and Relevant Libaries**<a name="tools-and-libraries"></a>
 
 1. [pyenv](https://github.com/pyenv/pyenv)
     * Used to manage the multiple versions of python installed on my local machine and set the required python version for the virtual environment.
 2. [venv](https://docs.python.org/3/library/venv.html)
     * Used to create the virtual environment in which the project was run to ensure stability and isolation of installed packages.
+3. [Heroku](https://dashboard.heroku.com/apps)
+    * Used to hose the project dashboard.
+4. [scikit learn](https://scikit-learn.org/stable/)
+    * Used to implement core ML functions.
+5. [Feature Engine](https://feature-engine.trainindata.com/en/latest/index.html)
+    * Used for core feature engineering and selection functions.

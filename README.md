@@ -448,7 +448,9 @@ This section lists all of the different sources and individuals that added to th
 
 1. [Stack overflow - Convert df.info() to standalone dataframe](https://stackoverflow.com/questions/64067424/how-to-convert-df-info-into-data-frame-df-info)
 
-2. 
+2. The Code Institute Data Analytics Course.
+
+3. My mentor Marcel.
 
 ### **Tools and Relevant Libaries**<a name="tools-and-libraries"></a>
 

@@ -17,6 +17,9 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
 3. [Dashboard](#dashboard)
     * [Running the application](#running-the-application)
     * [Summary](#summary)
+    * [House Sale Price Study](#price-study)
+    * [Price Predictor](#price-predictor)
+    * [ML: House Sale Price Prediction](#ml-price-prediction)
 4. [Data preprocessing](#data-preprocessing)
     * [Cleaning the data](#cleaning-the-data)
     * [Feature engineering](#feature-engineering)
@@ -309,6 +312,15 @@ This section is somewhat interactive, allowing the user to show content using a 
 
 ### **Price Predictor**<a name="price-predictor"></a>
 This section deals with making new predictions based on the created ML model and also calculates the summed sale price of the four properties inherited by the client.
+
+This addresses the business requirements exactly and is interactive, spitting out realtime predictions based on user entry.
+
+### **Hypothesis and Validation**<a name="hypothesis-and-validation"></a>
+This section addresses the hypotheses made at the beginning of the project and how they are verified. It references the results of the correlation study as reason for failure to reject the given hypotheses that the overall quality and garage size have a strong positive correlation with the sale price of the house.
+
+### **ML: House Sale Price Prediction**<a name="ml-price-prediction"></a>
+This is a technical section addressing the construction of the ML pipeline used in the dashboard to predict house sale price. It also outlines which of the features are the most important when predicting the sale price, and calculates the relative error that the model experiences on both the train and test datasets. It also generates two graphs showing the error between the predictions made by the model vs the real sale price.
+
 
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>

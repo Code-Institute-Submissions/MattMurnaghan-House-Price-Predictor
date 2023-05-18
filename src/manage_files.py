@@ -17,7 +17,7 @@ def load_housing_price_data():
 
 @st.cache_data()
 def load_clean_data(dataset):
-    if dataset=="refurbished":
+    if dataset=="inherrited":
         df = pd.read_csv("outputs/datasets/cleaned/inherited_house_price_records.csv")
     else:
         df = pd.read_csv("outputs/datasets/cleaned/clean_house_price_records.csv")

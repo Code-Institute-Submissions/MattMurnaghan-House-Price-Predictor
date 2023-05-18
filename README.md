@@ -27,6 +27,8 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
     * [Model selection](#model-selection)
     * [Hyperparameter tuning](#hyperparameter-tuning)
     * [Model evaluation](#model-evaluation)
+    * [Model evaluation - PCA](#model-evaluation-pca)
+    * [Model selection](#model-selection)
 6. [Results](#results)
     * [Predicted sale prices for the four inherited properties](#predicted-sale-prices-for-the-four-inherited-properties)
     * [Prediction for other houses in Ames, Iowa](#prediction-for-other-houses-in-ames-iowa)
@@ -134,7 +136,6 @@ From the projecct requirements, we can create a list of user stories for both th
 I tracked the user stories for this project on GitHub using individual tickets in adherance with Agile project management fundamentals.
 
 ## **Project Set Up**<a name="project-set-up"></a>
----
 
 I approached this project a bit differently than the other projects I've undertaken as part of the Full Stack Developer course with the Code Institute. 
 
@@ -285,7 +286,6 @@ pip freeze > requirements.txt
 Now that the environment is configured, we can begin to explore usage of the delivered application.
 
 ## **Dashboard**<a name="dashboard"></a>
----
 This section deals with using the streamlit dashboard app that would be delivered to the client.
 ### **Running the application**<a name="running-the-application"></a>
 The app itself is provided to the client through a streamlit dashboard delpoyed through heroku, please see the delpoyment section for more info.
@@ -341,12 +341,53 @@ At the end, we selected a combination of the yeojohnson, power and log transform
 We then performed a smart correlation selection on the entire dataset. This allowed us to analyse which of the features in the dataset were overcorrelated with each other, essentially, doubling the data without adding much extra value. We added this step into creating the first pipeline, allowing us to trim down the required features for us to feed into the ML pipeline during the modeling phase. 
 
 ## **Model development**<a name="model-development"></a>
+This section is explained in more detail in notebook 5, Modeling and Evaluation. 
 
+The goal of this section is to decide which algorithm is best to use for our ML model, and which set of hyperparameters yields the best results for said algorithm.
 ### **Model selection**<a name="model-selection"></a>
 
+Here, we ran a series of tests on the dataset, using custom functions taken from the codeinstitute course. These tests allowed us to see from a selection of different algorithms, which was the most successful in achieving the highest regression based R2 score.
+
+During this phase, when testing for the best algorithm, only the default hypterparameters were used.
+
+It is stated in the business requirements that an R2 score above 0.75 is required in order to satisfy the clients needs.
+
+Using the smart feature selection method, we chose to use an Extra Trees Classifier algorithm. Read more about it [here](https://towardsdatascience.com/what-when-how-extratrees-classifier-c939f905851c).
 ### **Hyperparameter tuning**<a name="hyperparameter-tuning"></a>
+Once the best algorithm had been found we then ran another set of tests using a custom function where we passed a series of of known hyperparamters configurations to tune the model for best results.
+
+The best parameters for the extra trees classifier were found to be:
+
+    {'model__max_depth': 6, 'model__n_estimators': 20}
 
 ### **Model evaluation**<a name="model-evaluation"></a>
+This pipeline with tuned hyper parameters returned an R2 score of 0.861 on the train set and 0.836 on the test set.
+
+### **Model evaluation - PCA**<a name="model-evaluation-pca"></a>
+A second model evaluation was completed using a PCA (Principal Component Analysis). Essentially, we filter down the dataset to only include a selected amount of features that consitute our chosen threshold of 75% of the variance in the data.
+
+| ![PCA Plot - 7 Components](images/pca_7_components.png) |
+| :--: |
+| *PCA shows 7 components dictate 76.4% of the data variance* |
+
+After swapping to the PCA model, the new best classifer was found to be the random forrest algorithm with best parameters below:
+
+    {'model__max_depth': None, 'model__n_estimators': 700}
+
+Using this method and the 7 most variant features causes an overfit in the model, yielding an R2 score of 0.975 on the train set and 0.768 on the test set, subsetting the best features down to the top four, OverallQual, GarageArea, GrLivArea and YearBuilt, the PCA model yields an R2 score of 0.894 and 0.811 on the train and test sets, meeting the business requirements and reducing the overfitting.
+
+The feature importance plot is shown below:
+
+| ![Feature Importance Plot - Refined PCA](outputs/pipelines/predict_saleprice/v1/feature_importance.jpg) |
+| :--: |
+| *PCA shows 7 components dictate 76.4% of the data variance* |
+
+After refining the PCA model, the best algorithm was still the random forrest classifer, but the new best parameters were as below:
+
+    {'model__max_depth': 6, 'model__n_estimators': 100}
+
+### **Model selection**<a name="model-selection"></a>
+I chose to use the refined PCA pipline in my final production as it seemlingly yielded acceptable results whilst utilising minimal data, there are also arguements to be made for the Smart Feature Selection pipeline as well, as the train and test sets are closer in their approximate error.
 
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>

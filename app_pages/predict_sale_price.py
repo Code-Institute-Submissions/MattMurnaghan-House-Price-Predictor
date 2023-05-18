@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from src.manage_files import load_clean_data, load_pkl_file
+from src.manage_files import load_pkl_file
 from src.pipeline_performance import regression_performance
 from src.pipeline_performance import regression_plots
 from graphviz import Digraph
@@ -13,7 +13,7 @@ def predict_sale_price_body():
     path = f"outputs/pipelines/predict_saleprice/{version}"
     sale_price_pipeline = load_pkl_file(f"{path}/best_regressor_pipeline.pkl")
     feature_importance = pd.read_csv(f"{path}/feature_importance.csv")
-    feature_importance_plot = plt.imread(f"{path}/feature_importance.png")
+    feature_importance_plot = plt.imread(f"{path}/feature_importance.jpg")
     X_train = pd.read_csv(f"{path}/X_train.csv")
     X_test = pd.read_csv(f"{path}/X_test.csv")
     y_train = pd.read_csv(f"{path}/y_train.csv")

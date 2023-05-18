@@ -416,7 +416,7 @@ To conclude our project, we must check that we have satisfied all business requi
 |Perform an extensive hyperparameter search for a given algorithm.| :white_check_mark: |
 
 * We have satisfied all business requirements
-* We camn predict the prices of other houses in Ames Iowa
+* We can predict the prices of other houses in Ames Iowa
 * We can predict the sum of selling all four inherrited houses: $591004.54
 
 ### **Future Work**<a name-="future-work"></a>
@@ -424,6 +424,18 @@ Due to time contraints and technical difficulties with deployment, I was unable 
 
 Developing on a Mac requires me to use the tensorflow-macos python libarary, which is not supported on the heroku stack. More research is needed here to find a way to work localy with tensorflow on Mac, and delpoy in a linux friendly environment.
 
+## **Deployment**<a name-="deployment"></a>
+* This project was deployed on Heroku, Stack 22, using python version 3.10.10.
+* If you want to deploy it yourself, follow these steps:
+    1. Sign up to Heroku [here](https://signup.heroku.com)
+    2. Create a new app from the heroku dashboard.
+    3. Select your nearest region, either US or EU.
+    4. Fork this project into your own repo.
+    5. Connect your new heroku app to your forked repo.
+    6. If you make any changes to the python version or dashboard tool, update the Procfile, runtime.txt and setup.sh files to refelct your new environment.
+    7. Build your app from the dashboard and voila!.
+
+Please note that all of this can be done from the command line by installing the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 

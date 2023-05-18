@@ -39,7 +39,7 @@ def price_predictor_body():
     total_price = predict_inherrited_house_price(price_pipeline, price_features)
     total_price = "%.2f" % total_price
     st.info(
-        "The sum total sale price for all 6 inherited "
+        "The sum total sale price for all 4 inherited "
         f"properties is \u0024{total_price}."
         )
     st.write("---")

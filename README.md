@@ -21,20 +21,19 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
     * [Price Predictor](#price-predictor)
     * [ML: House Sale Price Prediction](#ml-price-prediction)
 4. [Data preprocessing](#data-preprocessing)
-    * [Cleaning the data](#cleaning-the-data)
+    * [Data cleaning](#data-cleaning)
     * [Feature engineering](#feature-engineering)
-5. [Exploratory data analysis](#exploratory-data-analysis)
-    * [Visualizations of features and correlations](#visualizations-of-features-and-correlations)
-6. [Model development](#model-development)
+5. [Model development](#model-development)
     * [Model selection](#model-selection)
     * [Hyperparameter tuning](#hyperparameter-tuning)
     * [Model evaluation](#model-evaluation)
-7. [Results](#results)
+6. [Results](#results)
     * [Predicted sale prices for the four inherited properties](#predicted-sale-prices-for-the-four-inherited-properties)
     * [Prediction for other houses in Ames, Iowa](#prediction-for-other-houses-in-ames-iowa)
-8. [Conclusion](#conclusion)
+7. [Conclusion](#conclusion)
     * [Summary of findings](#summary-of-findings)
     * [Future work](#future-work)
+8. [Deployment](#deployment) 
 9. [References](#references)
     * [Data source](#data-source)
     * [Libraries and resources used](#libraries-and-resources-used)
@@ -321,6 +320,33 @@ This section addresses the hypotheses made at the beginning of the project and h
 ### **ML: House Sale Price Prediction**<a name="ml-price-prediction"></a>
 This is a technical section addressing the construction of the ML pipeline used in the dashboard to predict house sale price. It also outlines which of the features are the most important when predicting the sale price, and calculates the relative error that the model experiences on both the train and test datasets. It also generates two graphs showing the error between the predictions made by the model vs the real sale price.
 
+## **Data Preprocessing**<a name="data-preprocessing"></a>
+This section focuses heavily on the CRISP-DM process, read more about it [here](https://www.datascience-pm.com/crisp-dm-2/). Essentially, we spend the largest ammount of our time on the project here, ensureing that the data is properly prepared for the ML model. Datasets are useless unless they are properly prepared and screened before being use for analysis. a concept to keep in mind is "Garbage in, garbage out".
+
+### **Data cleaning**<a name="data-cleaning"></a>
+Data cleaning is carried out in a jupyter notebook, 3. DataCleaning.ipynb. Here the, we prefromed and exploratory data analysis (EDA) on the dataset using pandasprofiling to visualise the distribution of each feature, check for outliers and missing data.
+
+This allowed us to make informed decisions about which parts of the data was worth keeping, and which were worth scrapping.
+
+The notebook goes through the data cleaning process in detail and the reasons for dropping certain pieces of data, or the applied imputation methods and the reasoning for them to replace missing data for each feature in a way that does not overall impact the distribution and characteristics of each feature.
+
+### **Feature engineering**<a name="feature-engineering"></a>
+This section addresses the feature engineering done to the cleaned dataset. It is described in detail in jupyter notebook 4, FeatureEngineering.
+We apply a series of transformers to the data in an attepmt to bring each distribution closer to that of a normal distribution. 
+
+We use some custom functions taken from the codeinstitute course to visualise the resulting distribution plot, QQ plot and candlestick/IQR plot to see which if any transformers have a positive effect on the data, resulting in less outliers and a more evenly distributed dataset.
+
+At the end, we selected a combination of the yeojohnson, power and log transforms and applied them to their respective best features.
+
+We then performed a smart correlation selection on the entire dataset. This allowed us to analyse which of the features in the dataset were overcorrelated with each other, essentially, doubling the data without adding much extra value. We added this step into creating the first pipeline, allowing us to trim down the required features for us to feed into the ML pipeline during the modeling phase. 
+
+## **Model development**<a name="model-development"></a>
+
+### **Model selection**<a name="model-selection"></a>
+
+### **Hyperparameter tuning**<a name="hyperparameter-tuning"></a>
+
+### **Model evaluation**<a name="model-evaluation"></a>
 
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>

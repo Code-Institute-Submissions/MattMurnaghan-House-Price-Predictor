@@ -405,7 +405,7 @@ To conclude our project, we must check that we have satisfied all business requi
 
 |Business Requirement|Satisfied?|
 |:---|:---|
-|Deliver a dashboard|- [x]| 
+|Deliver a dashboard| :white_check_mark: | 
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 

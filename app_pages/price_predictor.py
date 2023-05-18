@@ -23,23 +23,23 @@ def price_predictor_body():
     feature_importance = list(pd.read_csv
                                 (f"{path}/feature_importance.csv")['Feature'])
 
-    st.write("### Sale Price Prediction for the refurbished houses:")
+    st.write("### Sale Price Prediction for the inherrited houses:")
     st.info(
-        f"* The Client is interested in predicting the house sales price"
-        f" for 6 newly refurbished houses, and any other house "
-        f"in Ames, Iowa."
+        "* The Client is interested in predicting the house sales price"
+        " for 6 newly inherited houses, and any other house "
+        "in Ames, Iowa."
         )
     st.write("---")
 
-    st.write("### Refurbished houses price prediction")
+    st.write("### Inherited houses price prediction")
     st.write(
-        f"* Below are the details of the refurbished "
-        f"houses and their respective sale price predictions."
+        "* Below are the details of the inherited "
+        "houses and their respective sale price predictions."
         )
-    total_price = predict_refurbished_house_price(price_pipeline, price_features)
+    total_price = predict_inherrited_house_price(price_pipeline, price_features)
     total_price = "%.2f" % total_price
     st.info(
-        f"The sum total sale price for all 6 refurbished "
+        "The sum total sale price for all 6 inherited "
         f"properties is \u0024{total_price}."
         )
     st.write("---")
@@ -51,13 +51,12 @@ def price_predictor_body():
 
     st.write("### Houses Price Predictor")
     st.info(
-        f"* Enter your values for the property for "
-        f"which you require a **price prediction**.\n\n"
-        f"Legend: \n\n"
-        f"* 1stFlrSF - First Floor measured in square feet.\n"
-        f"* GrLivArea - Above grade (ground) living area square feet.\n"
-        f"* GarageArea - Size of garage in square feet.\n"
-        f"* YearBuilt - Original construction date."
+        "* Enter the values relating to your property.\n\n"
+        "Legend: \n\n"
+        "* OverallQuall - First Floor measured in square feet.\n"
+        "* GrLivArea - Above grade (ground) living area square feet.\n"
+        "* GarageArea - Size of garage in square feet.\n"
+        "* YearBuilt - Original construction date."
         )
     X_live = DrawInputsWidgets()
 
@@ -68,20 +67,20 @@ def price_predictor_body():
                                               price_pipeline)
         # logic to display the sale price
         statement = (
-            f"The predicted selling price for this house "
+            "The predicted selling price for this house "
             f"is \u0024{price_prediction}"
             )
 
         st.success(statement)
 
 
-def predict_refurbished_house_price(price_pipeline, price_features):
-    refurbished = load_clean_data("refurbished")
-    row_count = len(refurbished)
-    refurbished.index = range(1, row_count+1)
+def predict_inherrited_house_price(price_pipeline, price_features):
+    inherrited = load_clean_data("inherrited")
+    row_count = len(inherrited)
+    inherrited.index = range(1, row_count+1)
     total_price = 0
     for x in range(row_count):
-        X_live = refurbished.iloc[[x]]
+        X_live = inherrited.iloc[[x]]
         st.write(X_live)
         price_prediction = predict_sale_price(X_live,
                                               price_features,

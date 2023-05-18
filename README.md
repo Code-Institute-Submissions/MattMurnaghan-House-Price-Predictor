@@ -30,8 +30,6 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
     * [Model evaluation - PCA](#model-evaluation-pca)
     * [Model selection](#model-selection)
 6. [Results](#results)
-    * [Predicted sale prices for the four inherited properties](#predicted-sale-prices-for-the-four-inherited-properties)
-    * [Prediction for other houses in Ames, Iowa](#prediction-for-other-houses-in-ames-iowa)
 7. [Conclusion](#conclusion)
     * [Summary of findings](#summary-of-findings)
     * [Future work](#future-work)
@@ -389,6 +387,18 @@ After refining the PCA model, the best algorithm was still the random forrest cl
 ### **Model selection**<a name="model-selection"></a>
 I chose to use the refined PCA pipline in my final production as it seemlingly yielded acceptable results whilst utilising minimal data, there are also arguements to be made for the Smart Feature Selection pipeline as well, as the train and test sets are closer in their approximate error.
 
+## **Results**<a name="results"></a>
+After choosing a final pipeline, I fitted the inherrited house records to it and yeilded the following results:
+
+|House|OverallQual|GarageArea|GrLivArea|YearBuilt|Sale Price|
+|:----|:----|:----|:----|:----|:----|
+|1|4|730|896|1961|$125730.39|
+|2|5|312|1329|1958| $137871.20|
+|3|4|482|1629|1997|$163085.71|
+|4|5|470|1604|1998|$164317.24|
+|||||Total Sum|$591004.54|
+
+We now have a pipeline that can accurately predict the sale price of houses in Ames, Iowa and have predicted an accurate sum of sale price for the 4 inherrited houses belonging to the client.
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 

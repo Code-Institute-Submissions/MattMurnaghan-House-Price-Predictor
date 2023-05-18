@@ -401,11 +401,29 @@ After choosing a final pipeline, I fitted the inherrited house records to it and
 We now have a pipeline that can accurately predict the sale price of houses in Ames, Iowa and have predicted an accurate sum of sale price for the 4 inherrited houses belonging to the client.
 
 ## **Conclusions**<a name-="conclusions"></a>
+This section addresses the conclusions of our project.
+
+### **Summary of Findings**<a name-="summary-of-findings"></a>
 To conclude our project, we must check that we have satisfied all business requirements:
 
 |Business Requirement|Satisfied?|
 |:---|:---|
-|Deliver a dashboard| :white_check_mark: | 
+|Perform a correlation and/or PPS study to investigate the most relevant variables correlated to the sale price.| :white_check_mark: |
+|Deliver an ML system that can predict the summed sale price of Lydia's four inherited properties, as well as any other house in Ames, Iowa.| :white_check_mark: |
+|Deliver either a conventional ML or Neural network based system.| :white_check_mark: |
+|Develop a dashboard that allows Lydia to explore how the house attributes correlated with the sale price using data visualizations.| :white_check_mark: |
+|Consider changing from regression to classification if suitable/required.| :white_check_mark: |
+|Perform an extensive hyperparameter search for a given algorithm.| :white_check_mark: |
+
+* We have satisfied all business requirements
+* We camn predict the prices of other houses in Ames Iowa
+* We can predict the sum of selling all four inherrited houses: $591004.54
+
+### **Future Work**<a name-="future-work"></a>
+Due to time contraints and technical difficulties with deployment, I was unable to deploy a tensorflow version of the project and compare the results and performance tradeoffs. 
+
+Developing on a Mac requires me to use the tensorflow-macos python libarary, which is not supported on the heroku stack. More research is needed here to find a way to work localy with tensorflow on Mac, and delpoy in a linux friendly environment.
+
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 

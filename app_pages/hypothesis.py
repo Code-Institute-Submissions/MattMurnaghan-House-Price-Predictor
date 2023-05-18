@@ -22,10 +22,10 @@ def hypothesis_body():
             "1. The correlation analysis between OverallQual and SalePrice shows a strong positive correlation.\n"
             "* This means that the higher the OverallQual, the higher the SalePrice.\n\n"
             "* We can see this from the scatter plot below, the relationship is linear.\n\n")
-    st.image("images/VariableStudy/OverallQual-vs-SalePrice.png")
+    st.image("images/VariableStudy/OverallQual-vs-SalePrice.jpg")
 
     st.write("\n\n2. The correlation analysis between GarageArea and SalePrice shows a moderate positive correlation.\n")
     st.write("* This means that the higher the GarageArea, the higher the SalePrice.\n\n")
     st.write("* We can see this from the scatter plot below, the relationship is linear.\n\n")
     st.write("* There are definitely some outliers but the relationship has a relatively small errror margin.\n\n")
-    st.image("images/VariableStudy/GarageArea-vs-SalePrice.png")
+    st.image("images/VariableStudy/GarageArea-vs-SalePrice.jpg")

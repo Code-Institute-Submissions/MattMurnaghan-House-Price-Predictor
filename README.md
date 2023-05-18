@@ -6,7 +6,7 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
 1. [Introduction](#introduction)
     * [Business Case](#business-case)
     * [Data set](#data-set)
-    * [Business Requirements](#business-case)
+    * [Business Requirements](#business-requirements)
     * [Hypothesis and Test](#hypothesis-and-test)
     * [User Stories - Data Practitioner](#user-stories-data-practitioner)
     * [User Stories - Client](#user-stories-client)
@@ -14,9 +14,9 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
     * [About pyenv](#about-pyenv)
     * [Setting up the Virtual Environment (venv)](#setting-up-the-virtual-environment-venv)
     * [Installing packages and dependencies](#installing-packages-and-dependencies)
-3. [Usage](#usage)
+3. [Dashboard](#dashboard)
     * [Running the application](#running-the-application)
-    * [Inputting features for prediction](#inputting-features-for-prediction)
+    * [Summary](#summary)
 4. [Data preprocessing](#data-preprocessing)
     * [Cleaning the data](#cleaning-the-data)
     * [Feature engineering](#feature-engineering)
@@ -94,7 +94,7 @@ The business requirements are outlined below:
 * Consider changing from regression to classification if suitable/required.
 * Perform an extensive hyperparameter search for a given algorithm.
 
-### **Hypothesis and Test**<a name="business-requirements"></a>
+### **Hypothesis and Test**<a name="hypothesis-and-test"></a>
 The following are the hypotheses that I have made for this project:
 1.  I suspect that a house with high OverallQual sells for a higher price.
     
@@ -132,6 +132,7 @@ From the projecct requirements, we can create a list of user stories for both th
 I tracked the user stories for this project on GitHub using individual tickets in adherance with Agile project management fundamentals.
 
 ## **Project Set Up**<a name="project-set-up"></a>
+---
 
 I approached this project a bit differently than the other projects I've undertaken as part of the Full Stack Developer course with the Code Institute. 
 
@@ -265,6 +266,10 @@ env ARCHFLAGS="-arch x86_64" pip install -r requirements.txt
 
 This ensured that the project was stable and ran locally on my machine. I also replaced tensorlfow with tensorflow-macos in the requirements.txt file as per apples direction in this article: [Using TensorFlow on MacOS](https://developer.apple.com/forums/thread/686926)
 
+**Update**
+
+I removed tensorflow from the project as deploying the macos version to heroku caused issues.
+
 Once the required packages have been installed, you can see the full list by running the following command:
 ```
 pip list
@@ -275,7 +280,36 @@ After installing the package on my system, I executed the following command to e
 pip freeze > requirements.txt
 ```
 
-Now that the environment is configured, we can begin to explore the data set and  the relating business case for this project.
+Now that the environment is configured, we can begin to explore usage of the delivered application.
+
+## **Dashboard**<a name="dashboard"></a>
+---
+This section deals with using the streamlit dashboard app that would be delivered to the client.
+### **Running the application**<a name="running-the-application"></a>
+The app itself is provided to the client through a streamlit dashboard delpoyed through heroku, please see the delpoyment section for more info.
+
+If looking to run the app locally, one can clone the project, install the required dependencies and python environment, then run the following command in their terminal:
+
+    streamlit run <your_app_name>
+
+This will run a local version of the app on your machine.
+
+### **Summary**<a name="summary"></a>
+This page in the dashboard gives a biref overview of the project objective, the supplied dataset, the business requirements specified by the client and a table explaining the different features of the dataset.
+
+It provides links to both kaggle.com and the readme file and is non interactive.
+
+
+### **House Sale Price Study**<a name="price-study"></a>
+This section deals with the study conducted on the dataset to address the business requirement, stating that a pearson/spearman correlation test and a pps score test should be performed on the dataset to determine the variables with the highest correlation to sale price.
+
+It generates scatter plots of the most correlated variables, pearson and spearman correlation heatmaps, pps heatmaps and displays the head of the dataset.
+
+This section is somewhat interactive, allowing the user to show content using a tickbox system.
+
+### **Price Predictor**<a name="price-predictor"></a>
+This section deals with making new predictions based on the created ML model and also calculates the summed sale price of the four properties inherited by the client.
+
 
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 

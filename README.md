@@ -43,6 +43,8 @@ The aim of this repo is to demonstrate Machine Learning and Deep Learning concep
 ## **Introduction**<a name="introduction"></a>
 This is the final project that I am undertaking as part of the Code Institute Full Stack Developer program. This project deals with the topics of Machine Learning, Deep Learning, Python development, business case analysis, API integration and dashboard development using Streamlit.
 
+Link to the project dashboard is [here](https://house-price-predictor.herokuapp.com)!
+
 ### **Business Case - Predicting House Prices in Ames, Iowa**<a name="business-case"></a>
 This project aims to assist a fictional client, Lydia Doe, in maximizing the sales price for four houses that she inherited in Ames, Iowa. Lydia is concerned about inaccurate pricing estimation due to her limited knowledge of the Iowan housing market. Therefore, she seeks the assistance of a data practitioner to predict the sales price of the inherited properties and any other house in Ames, Iowa.
 

@@ -400,6 +400,13 @@ After choosing a final pipeline, I fitted the inherrited house records to it and
 
 We now have a pipeline that can accurately predict the sale price of houses in Ames, Iowa and have predicted an accurate sum of sale price for the 4 inherrited houses belonging to the client.
 
+## **Conclusions**<a name-="conclusions"></a>
+To conclude our project, we must check that we have satisfied all business requirements:
+
+|Business Requirement|Satisfied?|
+|:---|:---|
+|Deliver a dashboard|- [x]| 
+
 ## **Acknowledgements**<a name-="acknowledgements"></a>
 
 This section lists all of the different sources and individuals that added to the overall project.
